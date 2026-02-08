@@ -1,0 +1,42 @@
+app:
+  name: "Data Policy Compliance System"
+  version: "1.0.0"
+  debug: false
+
+paths:
+  data_dir: "./data"
+  models_dir: "./data/trained_models"
+  raw_data: "./data/raw"
+  processed_data: "./data/processed"
+
+ml_models:
+  compliance_checker:
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 5
+  
+  complaint_classifier:
+    n_estimators: 50
+    learning_rate: 0.1
+  
+  similarity_threshold: 0.8
+
+features:
+  text_features:
+    - word_count
+    - sentence_count
+    - avg_word_length
+    - readability_score
+    - policy_sections_count
+  
+  compliance_features:
+    - has_data_collection
+    - has_third_party_sharing
+    - has_user_rights
+    - has_security_measures
+    - retention_period_days
+
+processing:
+  min_policy_length: 100
+  max_policy_length: 10000
+  stopwords_language: "english"
