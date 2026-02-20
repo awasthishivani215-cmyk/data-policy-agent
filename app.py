@@ -289,7 +289,8 @@ def chat():
 
 # ... (rest of your existing routes)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
+   
     # Create necessary directories
     os.makedirs('templates', exist_ok=True)
     os.makedirs('static/css', exist_ok=True)
@@ -304,4 +305,4 @@ if __name__ == '__main__':
     print(f"API Health Check: http://127.0.0.1:5000/api/health")
     print("-" * 60)
     
-    app.run(debug=True, host='127.0.0.1', port=5000)
+     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
