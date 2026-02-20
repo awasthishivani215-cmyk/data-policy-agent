@@ -290,19 +290,16 @@ def chat():
 # ... (rest of your existing routes)
 
 if __name__ == "__main__":
-   
-    # Create necessary directories
+
     os.makedirs('templates', exist_ok=True)
     os.makedirs('static/css', exist_ok=True)
     os.makedirs('static/js', exist_ok=True)
     os.makedirs('uploads', exist_ok=True)
-    
+
     print("=" * 60)
     print("Data Policy Compliance System")
     print("=" * 60)
     print("Starting Flask server...")
-    print(f"Dashboard URL: http://127.0.0.1:5000")
-    print(f"API Health Check: http://127.0.0.1:5000/api/health")
     print("-" * 60)
-    
-     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
