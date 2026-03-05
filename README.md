@@ -7,4 +7,4 @@ make a virtual environment on terminal - venv\Scripts\activate (for windows)
 commands - pip install -r- requirements.text
 command - python app.py
 flask server will run
-also ports 8080 with dashboard url and backend server api like api\health\api for backend python(flask) serve r
+also ports 8080 with dashboard url and backend server api like api\health\api for backend python(flask) server integerate dand deployed on railway
